@@ -81,19 +81,19 @@ function merge_package(){
     git sparse-checkout set "$@"
     for folder in "$@"; do
         mv -f "$folder" "$rootdir/$localdir"
-    done
+    donehttps://github.com/immortalwrt/
     cd "$rootdir"
 }
 # 提取 ddns-scripts
-merge_package openwrt-23.05 https://github.com/immortalwrt/packages.git feeds/packages/net net/ddns-scripts
+merge_package openwrt-24.10 packages.git feeds/packages/net net/ddns-scripts
 # 提取 gn
-#merge_package openwrt-23.05 https://github.com/immortalwrt/packages.git package/passwall/packages devel/gn
+#merge_package openwrt-24.10 https://github.com/immortalwrt/packages.git package/passwall/packages devel/gn
 # 提取 naiveproxy
 #merge_package master https://github.com/immortalwrt/packages.git package/passwall/packages net/naiveproxy
 merge_package v5 https://github.com/sbwml/openwrt_helloworld.git package/passwall/packages naiveproxyoxy
 # 提取 tailscale
-merge_package openwrt-23.05 https://github.com/immortalwrt/packages.git feeds/packages/net net/tailscale
+merge_package openwrt-24.10 https://github.com/immortalwrt/packages.git feeds/packages/net net/tailscale
 # 提取 socat
-merge_package openwrt-23.05 https://github.com/immortalwrt/packages.git feeds/packages/net net/socat
+merge_package openwrt-24.10 https://github.com/immortalwrt/packages.git feeds/packages/net net/socat
 # 提取 luci-app-socat
 merge_package main https://github.com/chenmozhijin/luci-app-socat.git feeds/lienol luci-app-socat
