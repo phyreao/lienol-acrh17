@@ -81,7 +81,7 @@ function merge_package(){
     git sparse-checkout set "$@"
     for folder in "$@"; do
         mv -f "$folder" "$rootdir/$localdir"
-    donehttps://github.com/immortalwrt/
+    done https://github.com/immortalwrt/
     cd "$rootdir"
 }
 # 提取 ddns-scripts
